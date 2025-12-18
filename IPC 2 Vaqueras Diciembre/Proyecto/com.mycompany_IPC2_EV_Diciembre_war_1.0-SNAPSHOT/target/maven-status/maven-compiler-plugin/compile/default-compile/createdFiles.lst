@@ -1,0 +1,9 @@
+com\mycompany\ipc2_ev_diciembre\Conexion\ConexionDB.class
+com\mycompany\ipc2_ev_diciembre\Conexion\TypeAdapter\LocalDateAdapter.class
+com\mycompany\ipc2_ev_diciembre\controller\PingServlet.class
+com\mycompany\ipc2_ev_diciembre\filters\CorsFilter.class
+com\mycompany\ipc2_ev_diciembre\controller\RegistroGamerServlet.class
+com\mycompany\ipc2_ev_diciembre\DAO\PerfilGamerDAO.class
+com\mycompany\ipc2_ev_diciembre\dto\RegistroGamerDTO.class
+com\mycompany\ipc2_ev_diciembre\service\RegistroGamerService.class
+com\mycompany\ipc2_ev_diciembre\DAO\UsuarioAuthDAO.class
