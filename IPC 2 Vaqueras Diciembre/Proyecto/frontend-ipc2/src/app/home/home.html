@@ -1,0 +1,39 @@
+<h1>Home</h1>
+
+@if (loading) {
+  <p>Cargando sesión...</p>
+} @else {
+  @if (me) {
+    <p><b>Email:</b> {{ me.email }}</p>
+    <p><b>Rol:</b> {{ me.rol }}</p>
+
+    @if (me.nickname) {
+      <p><b>Nickname:</b> {{ me.nickname }}</p>
+    }
+
+    <button (click)="logout()">Logout</button>
+
+    <hr />
+
+    @if (me?.rol === 'GAMER') {
+  <hr />
+  <h3>Cartera</h3>
+  <p><b>Saldo:</b> Q{{ saldo }}</p>
+
+  <input type="number" [(ngModel)]="monto" placeholder="Monto a recargar" />
+  <button (click)="recargar()">Recargar</button>
+}
+
+
+    @if (me.rol === 'EMPRESA') {
+      <p>Área Empresa (catálogo, reportes, etc.)</p>
+    }
+
+    @if (me.rol === 'ADMIN') {
+      <p>Área Admin (categorías, comisiones, reportes globales)</p>
+    }
+
+  } @else {
+    <p style="color:red">No hay sesión activa.</p>
+  }
+}
