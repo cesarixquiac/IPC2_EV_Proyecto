@@ -1,9 +1,14 @@
 D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\controller\PingServlet.java
 D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\Conexion\TypeAdapter\LocalDateAdapter.java
+D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\controller\LoginServlet.java
 D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\DAO\PerfilGamerDAO.java
+D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\dto\LoginResponseDTO.java
+D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\DAO\AuthUser.java
+D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\dto\RegistroGamerDTO.java
 D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\Conexion\ConexionDB.java
 D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\DAO\UsuarioAuthDAO.java
 D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\controller\RegistroGamerServlet.java
+D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\Service\LoginService.java
+D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\dto\LoginDTO.java
 D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\Service\RegistroGamerService.java
-D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\dto\RegistroGamerDTO.java
 D:\cesar\Documents\Usac\2025\EV Diciembre\IPC 2 Vaqueras Diciembre\Proyecto\com.mycompany_IPC2_EV_Diciembre_war_1.0-SNAPSHOT\src\main\java\com\mycompany\ipc2_ev_diciembre\filters\CorsFilter.java

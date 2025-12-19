@@ -52,5 +52,31 @@ public class UsuarioAuthDAO {
             return rs.next();
         }
     }
+    
+    public AuthUser findByEmailAndPassword(String email, String password) throws SQLException {
+     
+    String sql = "SELECT user_id, email, rol, activo FROM Usuario_Auth WHERE email = ? AND password_hash = ?";
+        System.out.println(email);
+        System.out.println(password);
+
+    try (PreparedStatement ps = con.prepareStatement(sql)) {
+        ps.setString(1, email);
+        ps.setString(2, password);
+
+        ResultSet rs = ps.executeQuery();
+        if (!rs.next()) return null;
+
+        if (!rs.getBoolean("activo")) {
+            throw new SQLException("Usuario inactivo");
+        }
+
+        return new AuthUser(
+            rs.getInt("user_id"),
+            rs.getString("email"),
+            rs.getString("rol")
+        );
+    }
+}
+    
 }
 

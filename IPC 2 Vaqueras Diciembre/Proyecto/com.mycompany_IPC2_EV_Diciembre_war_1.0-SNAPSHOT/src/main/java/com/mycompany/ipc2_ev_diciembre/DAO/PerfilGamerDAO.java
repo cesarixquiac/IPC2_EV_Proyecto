@@ -7,6 +7,7 @@ package com.mycompany.ipc2_ev_diciembre.DAO;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
@@ -38,5 +39,15 @@ public class PerfilGamerDAO {
             return ps.executeQuery().next();
         }
     }
+    
+    public String obtenerNickname(int gamerId) throws SQLException {
+    String sql = "SELECT nickname FROM Perfil_Gamer WHERE gamer_id = ?";
+    try (PreparedStatement ps = con.prepareStatement(sql)) {
+        ps.setInt(1, gamerId);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) return rs.getString("nickname");
+        return null;
+    }
+}
 }
 
