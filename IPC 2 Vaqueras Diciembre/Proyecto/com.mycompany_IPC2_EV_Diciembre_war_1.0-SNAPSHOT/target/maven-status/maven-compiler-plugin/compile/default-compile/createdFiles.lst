@@ -5,7 +5,9 @@ com\mycompany\ipc2_ev_diciembre\controller\PingServlet.class
 com\mycompany\ipc2_ev_diciembre\DAO\AuthUser.class
 com\mycompany\ipc2_ev_diciembre\filters\CorsFilter.class
 com\mycompany\ipc2_ev_diciembre\controller\RegistroGamerServlet.class
+com\mycompany\ipc2_ev_diciembre\controller\MeServlet.class
 com\mycompany\ipc2_ev_diciembre\Service\RegistroGamerService.class
+com\mycompany\ipc2_ev_diciembre\controller\LogoutServlet.class
 com\mycompany\ipc2_ev_diciembre\DAO\PerfilGamerDAO.class
 com\mycompany\ipc2_ev_diciembre\controller\LoginServlet.class
 com\mycompany\ipc2_ev_diciembre\Service\LoginService.class

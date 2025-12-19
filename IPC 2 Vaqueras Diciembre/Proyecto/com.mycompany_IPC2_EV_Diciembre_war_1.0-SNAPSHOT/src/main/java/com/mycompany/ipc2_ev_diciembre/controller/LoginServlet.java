@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -40,7 +41,7 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet LoginServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
@@ -73,25 +74,37 @@ public class LoginServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-        protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.setContentType("application/json;charset=UTF-8");
+protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    resp.setContentType("application/json;charset=UTF-8");
 
-        try {
-            Gson gson = new Gson();
-            LoginDTO dto = gson.fromJson(req.getReader(), LoginDTO.class);
+    try {
+        Gson gson = new Gson();
+        LoginDTO dto = gson.fromJson(req.getReader(), LoginDTO.class);
 
-            LoginService service = new LoginService();
-            LoginResponseDTO result = service.login(dto.getEmail(), dto.getPassword());
+        LoginService service = new LoginService();
+        LoginResponseDTO result = service.login(dto.getEmail(), dto.getPassword());
 
-            
-            resp.setStatus(HttpServletResponse.SC_OK);
-            resp.getWriter().write(gson.toJson(result));
+        //Crear sesión y guardar datos ANTES de responder
+        HttpSession session = req.getSession(true);
+        session.setAttribute("USER_ID", result.getUserId());
+        session.setAttribute("ROL", result.getRol());
+        session.setAttribute("EMAIL", result.getEmail());
+        session.setAttribute("GAMER_ID", result.getGamerId());
+        session.setAttribute("NICKNAME", result.getNickname());
+        session.setMaxInactiveInterval(30 * 60);
 
-        } catch (Exception e) {
-            resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            resp.getWriter().write("{\"error\":\"" + e.getMessage().replace("\"","'") + "\"}");
-        }
+        System.out.println("LOGIN sessionId=" + session.getId());
+        System.out.println("LOGIN USER_ID=" + session.getAttribute("USER_ID"));
+
+        // responder
+        resp.setStatus(HttpServletResponse.SC_OK);
+        resp.getWriter().write(gson.toJson(result));
+
+    } catch (Exception e) {
+        resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        resp.getWriter().write("{\"error\":\"" + e.getMessage().replace("\"", "'") + "\"}");
     }
+}
 
 
     /**
